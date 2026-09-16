@@ -1,0 +1,42 @@
+The Constraint Protocol (CP-SPEC)
+Copyright (c) 2026 Roy Jason Jeyanandan
+
+This repository is dual-licensed by content type, as fixed by decision D-041 of the
+CP-SPEC v0.5 Decision Log (spec/CP-SPEC-v0_5-DECISION-LOG.md, section 3.5).
+
+1. Specification prose -- every Markdown document under spec/ and all other prose in
+   this repository -- is licensed under the Creative Commons Attribution 4.0
+   International License (CC BY 4.0). This file.
+
+2. Schemas, JSON, reference code and test vectors, where present, are licensed under
+   the Apache License, Version 2.0 -- see LICENSE-CODE. Apache-2.0 is chosen for its
+   express patent grant.
+
+CC BY 4.0 -- you are free to:
+
+  Share  -- copy and redistribute the material in any medium or format
+  Adapt  -- remix, transform, and build upon the material for any purpose,
+            including commercially
+
+The licensor cannot revoke these freedoms as long as you follow the licence terms.
+
+Under the following terms:
+
+  Attribution -- You must give appropriate credit, provide a link to the licence,
+  and indicate if changes were made. You may do so in any reasonable manner, but
+  not in any way that suggests the licensor endorses you or your use.
+
+  No additional restrictions -- You may not apply legal terms or technological
+  measures that legally restrict others from doing anything the licence permits.
+
+CC BY 4.0 is chosen because it permits the forks the specification itself
+requires (section 24 of CP-SPEC). Forking is expected; every decision in the log
+is revisable through the process the specification defines.
+
+Licence deed:       https://creativecommons.org/licenses/by/4.0/
+Full legal code:    https://creativecommons.org/licenses/by/4.0/legalcode
+
+The full legal code at the URL above governs. This file is a faithful summary of
+its terms together with the copyright notice and the scope split required by
+D-041; where the summary and the full legal code differ, the full legal code
+governs.
