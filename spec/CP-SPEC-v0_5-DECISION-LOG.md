@@ -114,7 +114,7 @@
 - **Touches:** §4.2, §5.4–5.5, §11.3, §12, §15.3, Appendix A, D-015.
 - **⚑ B:** (i) referrer type registration mechanism; (ii) **can a party other than the record owner attach a referrer?** If not, D-006.b fails and D-024 becomes "borrow the shape, not the server."
 
-### 3.3 Group 3 — Operational findings (Skippy↔CTO cross-node run, 2026-05-04)
+### 3.3 Group 3 — Operational findings (cross-node run, 2026-05-04)
 
 **D-025 · WitnessAttestation polymorphism**
 - **Decision:** One WitnessAttestation kind with a mandatory `claim_type` discriminator. CP defines a conservative top-level family — `delegation · artifact · constraint-lifecycle · peer-validation` — with sub-types namespaced per D-012. Under D-024, each `claim_type` is a referrer subtype under `cp.witness.v1`.
@@ -129,7 +129,7 @@
 **D-027 · The promotion rule**
 - **Decision:** A SubAgentArtifact carrying a verdict is *evidence*, never directly an AdherenceClaim. It becomes an AdherenceClaim only when a validator identity (distinct DID, §4.8) signs an AdherenceClaim referencing it as `evaluation_trace` input. **Tier 1: no artifact is an AdherenceClaim unless signed by a validator DID.**
 - **Rationale:** A compliance-checker sub-agent is one party's delegate; its output is that party's evidence, not independent judgment. Letting it count directly lets a party self-certify and collapses D-004. The run's inconsistency — proper AdherenceClaim only cross-org, in-loop compliance routed through SubAgentArtifact → WitnessAttestation — was the symptom. This does not ban the pattern; a validator countersigns.
-- **Consequence:** the cto01 vault's constraint-reopen events are non-conforming under v0.5 until a validator countersign step is added.
+- **Consequence:** one node's record-store constraint-reopen events are non-conforming under v0.5 until a validator countersign step is added.
 - **Touches:** §4.8, §10.5–10.8, §11.1, D-004, D-026.
 
 **D-028 · Constraint lifecycle**
