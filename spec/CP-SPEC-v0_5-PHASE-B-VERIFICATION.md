@@ -116,8 +116,8 @@ class Provenance(BaseModel):
 
 **Additional D-044 findings — expansion inconsistencies are the project's own:**
 - GitHub README: **SIEP = Semantic Interoperability and Epistemic Protocol**; PyPI description (same release): **SIEP = Semantic Information Exchange Protocol**. Both are the project's text. CP cites the GitHub README as canonical (the repo is their declared single source of truth) and notes the PyPI variant.
-- **CIP = Cognition and Interoperability Protocol** (README). The "Contingency Interaction Protocol" expansion I used earlier is not in current project text — drop it.
-- **SAB = Semantic Alignment Broadcast** (README). "Semantic Alignment via Bargaining" — drop.
+- **CIP = Cognition and Interoperability Protocol** (README). The "Contingency Interaction Protocol" expansion recorded in earlier drafts is not in current project text; dropped.
+- **SAB = Semantic Alignment Broadcast** (README). "Semantic Alignment via Bargaining"; dropped.
 - **TFP = Team Formation via Polling** — consistent.
 
 ---
