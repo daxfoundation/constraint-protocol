@@ -1,0 +1,60 @@
+# Constraint Protocol Specification (CP-SPEC) v0.5
+
+**Status:** PUBLIC WORKING DRAFT
+**Date:** 2026-09-10
+**Publisher:** DAX Foundation
+**Supersedes:** CP-SPEC v0.4.1 (2026-05-06), v0.4 (2026-04-27), v0.3 (2026-04-25), v0.2 (2026-04-12)
+**Prior lineage:** EDDAx v0.5.1 (2026-04-07), EDDAx v0.5, EDDAx v0.2 field-level (2026-01-25)
+**License:** Specification prose — CC-BY-4.0. Schemas, JSON, reference code, test vectors — Apache-2.0.
+
+---
+
+## HOW TO READ THIS DOCUMENT
+
+This is the canonical specification for the Constraint Protocol substrate. It defines structural primitives, normative rules, and architectural commitments. Extensions are specified separately. Operational guidance lives elsewhere.
+
+Three things distinguish this version from its predecessors.
+
+**It adopts before it builds.** Where a mature standard already does what a prior CP version specified bespoke, this version adopts or profiles the standard and says so. The identity layer is W3C DID and Verifiable Credentials 2.0. The witnessed ledger is an IETF SCITT Transparency Service. Relationship predicates are W3C PROV-O. Attachment of attestations to immutable records is the OCI referrer pattern as implemented by the AGNTCY Agent Directory. Each adoption is recorded as a numbered decision with rationale in §25. What remains for CP to build is small, and it is stated plainly in §3.4.
+
+**It is traceable.** Every primitive resolves to a numbered decision (D-001 through D-047) in §25. Every decision records its rationale, what it touches, and what it amends. Where a decision reversed an earlier one, both are recorded. Where a claim about an external project is made, it is dated and phrased as observation. The history of this specification is part of what it specifies.
+
+**It says what it has not shown.** §27 states what evidence exists for the protocol's claims — one cross-node operational run — and what does not: a controlled study, external adversarial review. It commits to a validation design and invites others to run it.
+
+This is a working draft. The Constraint Protocol is anti-ossifying by commitment (§1.6). Every decision here is revisable through the process this document specifies. The specification is contestable using the mechanisms it defines.
+
+**Reading order.** §0 says what the protocol is for. §1 states the commitments everything else rests on. §2 places CP among the systems it composes with. §3 explains the two-tier structure and the adopt/substitute/build discipline. §4–§24 are the specification proper. §25–§27 are the records. Appendices carry the artifact index, normative index, bidirectional vocabulary, worked examples, contribution protocol, and the watch list with conditions for revision.
+
+---
+
+## TABLE OF CONTENTS
+
+- 0. PREAMBLE
+- 1. ARCHITECTURAL COMMITMENTS
+- 2. THE FIVE-LAYER ARCHITECTURE AND ITS COMPOSITION SURFACES
+- 3. THE TWO-TIER CORE AND THE ADOPT / SUBSTITUTE / BUILD DISCIPLINE
+- 4. TIER 1 PRIMITIVES — STRUCTURAL-RIGID
+- 5. TIER 2 PRIMITIVES — SKELETON-ONLY
+- 6. EXTENSION COMPOSITION
+- 7. IDENTITY AND CUSTODY
+- 8. EVENT
+- 9. EPISODE AND CONTEXT
+- 10. WITNESS AND VALIDATOR
+- 11. ADHERENCECLAIM AND THE COMPOUNDING FLOOR
+- 12. CONTESTATION AND ADJUDICATION
+- 13. TOMBSTONE, PATCH, AND SCOPE — INTERACTIONS
+- 14. CONCEPT AND CONCEPTCOLLECTION
+- 15. RELATIONSHIP
+- 16. ROLEGRANT — THE AUTHORITY WALK
+- 17. SNAPSHOT
+- 18. REFERENCE, PROVENANCE, AND COMPILATION
+- 19. CANONICALIZATION
+- 20. PRIMITIVES REGISTRY, COMPROMISE DECLARATION, CONSTRAINTDECL, POLICY
+- 21. WALKER CONTRACT
+- 22. FAILURE MODES AND THE THREAT-MODELING METHOD
+- 23. EXTENSION MECHANISM
+- 24. SPECIFICATION EVOLUTION
+- 25. DECISION LOG
+- 26. OPEN RESEARCH
+- 27. EVIDENCE AND VALIDATION
+- APPENDIX A — ARTIFACT KIND SUMMARY
