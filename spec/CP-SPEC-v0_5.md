@@ -529,6 +529,18 @@ Candidate mechanisms — social recovery (M-of-N trustees may authorize a new an
 |---|---|---|---|
 | DID | `did:cp:<hash of frozen genesis>` | Permanent | No one — self-certifying |
 | Genesis document | Frozen inception: anchor, next-anchor commitment, kind, chain role, principal | Written once | The entity, at creation |
+| Rotation log | Append-only key event log with pre-rotation | Grows | The entity, via anchor |
+| Verification methods | Anchor (SLH-DSA), workhorse (ML-DSA-44), transitional (Ed25519), federated providers | Via log | The entity |
+| Services | Resolution paths, friendly names, provider endpoints | Via log | The entity |
+| Custody | Permanent content-addressed substrate + any mirrors | Permanent | No one — multi-local |
+| Publishing | Writing genesis and log to custody | — | Operator (default) or entity (always open) |
+| Friendly name | Human-readable alias, cryptographically verified | Mutable | Registry (convenience only) |
+
+The fingerprint is the frozen root. Everything else evolves around it. No layer gives any operator the power to be a required custodian.
+
+---
+
+## 8. EVENT
 @@CP_PART_4@@
 - Adjudicators' `engagement_score`s accumulate. A principal whose Contestations are consistently scored unengaged has a record.
 - Contestations are themselves contestable. A pattern of bad-faith contestation can be contested as a pattern.
