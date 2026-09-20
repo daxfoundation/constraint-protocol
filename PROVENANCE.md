@@ -24,4 +24,14 @@
 - Decision log — `d5247ebbfe33f533f16752457eeddfb6f905bd2a51e64108988db7386f556dfc`
 - Phase B verification — `4a077e01e201fbbb47e6e781aa519d3b0a1dc420c778193f82a8f45ebce2d7d0`
 
+**Publication state.** All three sanitised copies are present in this repository under `spec/`, and each was verified against its publication digest above on 2026-09-20:
+
+| File | Bytes | git blob sha1 |
+|---|---|---|
+| `spec/CP-SPEC-v0_5.md` | 225,851 | `b63a3ee7f5b75b5e10f6eb1868b220c876b42b5a` |
+| `spec/CP-SPEC-v0_5-DECISION-LOG.md` | 31,891 | `835e5862fd0aee53ef3ebea438ed0c602b6389f1` |
+| `spec/CP-SPEC-v0_5-PHASE-B-VERIFICATION.md` | 17,290 | `209e50278e7fe8b412963d9f25207b41c0fc5757` |
+
+The specification body was assembled inside this repository from six byte-exact, line-aligned parts that had been staged under `spec/_staging/`. The staging directory was removed once the assembled file matched the publication digest for the body. The bytes served here are the sanitised copy — not the private original.
+
 The byte-exact originals are retained privately, unmodified, as the archive of record.
