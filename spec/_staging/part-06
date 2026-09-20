@@ -1,0 +1,17 @@
+- **Principal** — entity acting under no delegation; of any kind. §1.12.
+- **Promotion rule** — only validator DIDs issue AdherenceClaims; sub-agent verdicts are evidence. §4.9.
+- **Receipt** — TS's signed inclusion proof; the witness's countersignature. §4.1.2.
+- **Referrer** — typed artifact attached to an immutable target. §4.2.
+- **Scope** — declared sovereignty boundary; non-narrowable; selects TS instance. §5.6.
+- **Snapshot** — signed binding of TS tree heads and a floor filter; anchors claims in time. §17.
+- **Stance** — participant's epistemic position; `unresolved` is first-class. §5.9.
+- **SubAgentArtifact** — output of one model/tool invocation in a role. §5.7.
+- **Transparency Service (TS)** — SCITT log operator; CP's witness. §4.1.
+- **Verdict** — validator's output; probabilistic. §11.2.
+- **Witness** — records that participant-signed statements were registered; asserts nothing about content. §10.2.
+
+---
+
+*End of CP-SPEC v0.5.*
+
+*This is a Public Working Draft. Every decision is recorded in §25 and revisable through §24. Every claim about an external project is dated and phrased as observation. Every claim about what CP achieves is, per §27.7, a hypothesis until the record shows otherwise. The specification is contestable using the mechanisms it specifies.*
