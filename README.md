@@ -2,6 +2,8 @@
 
 When two parties interact, there is usually no durable record of what either one was actually bound by at the time. The Constraint Protocol is a way of keeping one: each side declares up front what it will not do, consequential acts get signed and witnessed, and the log cannot be quietly edited afterwards. So when somebody asks later what happened and who was answerable for it, there is something to look at besides everyone's memory.
 
+It is more than a ledger, though. The judging is kept separate from the witnessing, and a judge can re-score the past later with better knowledge without erasing the old verdict. A declared constraint can hold up named kinds of work until a problem is dealt with, and records anyone who tries to get round it. Anyone can dispute any record, and the rulings on disputes can be disputed too. It even records who deferred to whom and why a position changed — the raw material for spotting consensus that was manufactured rather than reached.
+
 It works the same way whether the parties are people, companies, or software. That is deliberate — the protocol does not care what kind of thing you are, only whether you declared a constraint and can be checked against it.
 
 Stewarded by the [DAX Foundation](https://daxfoundation.org). This is a **public working draft**, and the evidence behind it is one run. Details below, honestly.
@@ -79,7 +81,7 @@ The watch list of adjacent work, and the conditions under which CP moves from *b
 
 ## A first adopter who is not neutral
 
-Obsidian Delta commits publicly to three things: everything it operates runs under a declared constraint with the record kept; it will run CP with any external party willing to declare and be checked; and it holds the [DAX constraint](https://daxfoundation.org/#dax-constraint) on top of the protocol.
+Obsidian Delta commits publicly to three things: to run what it operates under a declared constraint with the record kept; to run CP with any external party willing to declare and be checked; and to hold the [DAX constraint](https://daxfoundation.org/#dax-constraint) on top of the protocol. These are commitments, not a description of current practice. Today the protocol has run in full once (see Status); the ledger-only service deployed since is idle, and the rest is still to be built.
 
 Two things follow. The protocol's first adopter is also where it came from, which makes this a conflict of interest rather than a validation — skin in the game, not evidence. And the DAX constraint is an *example* of a declared constraint, not a component of CP: the protocol is indifferent to which constraint you declare, only that you declared one and can be checked against it. Declaring something quite different and running CP honestly is entirely coherent.
 
