@@ -18,15 +18,15 @@ Stewarded by the [DAX Foundation](https://daxfoundation.org).
 | Dated | 2026-09-10 |
 | Phase A — decisions | Complete. 47 decisions (D-001 – D-047) |
 | Phase B — verification | Decision-affecting checks complete (B-1 – B-5, B-7). Phase A holds; one conditional resolved |
-| Phase C — specification body | `spec/CP-SPEC-v0_5.md` — **pending upload** (see below) |
+| Phase C — specification body | Staged byte-exact, not yet assembled. See **Publication state** |
 
 ## Contents
 
 | File | What it is | Bytes | git blob sha1 | sha256 |
 |---|---|---|---|---|
-| [`spec/CP-SPEC-v0_5-DECISION-LOG.md`](spec/CP-SPEC-v0_5-DECISION-LOG.md) | The traceability record. Every primitive in v0.5 resolves to a numbered decision here | 31,898 | `68f3ba3a5cff626a85c3644d3723828ecca7f183` | `4cf8a947c85d4b78f866f9ff7700aa878d50101b5fbfba3a815be3931fd161f3` |
-| [`spec/CP-SPEC-v0_5-PHASE-B-VERIFICATION.md`](spec/CP-SPEC-v0_5-PHASE-B-VERIFICATION.md) | Primary-source verification of the decisions that could have reversed | 17,281 | `235d6d3aa10e707add60c23418d543487d2ae2c3` | `96f27617815e2bedc0c60c16afd023acaff156b5eab17e7c85deddf700217729` |
-| `spec/CP-SPEC-v0_5.md` | The specification body | 225,820 | `c7062b60d3b1ae60f80bf24479bbb2dc5f49191c` | `d371e2ee80951a1c5945b8004e69049a95f6fb5a4448fdfba74d519ac0d6f4a0` |
+| [`spec/CP-SPEC-v0_5-DECISION-LOG.md`](spec/CP-SPEC-v0_5-DECISION-LOG.md) | The traceability record. Every primitive in v0.5 resolves to a numbered decision here | 31,891 | `835e5862fd0aee53ef3ebea438ed0c602b6389f1` | `d5247ebbfe33f533f16752457eeddfb6f905bd2a51e64108988db7386f556dfc` |
+| [`spec/CP-SPEC-v0_5-PHASE-B-VERIFICATION.md`](spec/CP-SPEC-v0_5-PHASE-B-VERIFICATION.md) | Primary-source verification of the decisions that could have reversed | 17,290 | `209e50278e7fe8b412963d9f25207b41c0fc5757` | `4a077e01e201fbbb47e6e781aa519d3b0a1dc420c778193f82a8f45ebce2d7d0` |
+| `spec/CP-SPEC-v0_5.md` | The specification body — **not yet in this repository**; staged, see below | 225,851 | `b63a3ee7f5b75b5e10f6eb1868b220c876b42b5a` | `816b5f4798a71a83ff4e2c3c36695144a45928d9a03fb1f94c759820891b37c9` |
 
 **Reading order.** Start with §0 and §3.5 of the decision log (the architectural commitments and
 the publication posture), then the Phase B summary table, then the specification body.
@@ -40,6 +40,40 @@ git hash-object spec/*.md
 ```
 
 A file whose digest does not match its row is not the v0.5 text, whatever its header says.
+
+**Which digests these are.** The rows above are the digests of the *sanitised publication copies*
+— the bytes this repository serves. They match the publication digests in
+[`PROVENANCE.md`](PROVENANCE.md), and they are deliberately **not** the source digests of the
+private originals those copies derive from. PROVENANCE.md lists both sets; do not verify a file
+here against a source digest.
+
+## Publication state
+
+The two linked files above are present, and their rows were verified against this repository on
+2026-09-20. The specification body is **not** yet here as a single file.
+
+It is staged byte-exact as six line-aligned parts under `spec/_staging/`:
+
+| Part | Bytes | git blob sha1 |
+|---|---|---|
+| `part-01` | 44,701 | `1413c4ccdb074faf76bfa5f23aeca2840cbaed59` |
+| `part-02` | 44,973 | `ead018f2c08509d7ef396d194869e1c669bad7a3` |
+| `part-03` | 44,969 | `8882a8297ae04a81687db445ebb6187da6e40ba2` |
+| `part-04` | 44,951 | `0362d3430c0e0846db6d4f12138d4318c0f2d119` |
+| `part-05` | 44,928 | `7b1b20b119a8a64303f576bf06a5bde76fa3119c` |
+| `part-06` | 1,329 | `19165d3c0fbae4d8dfb2ea70a4a428646b1d051c` |
+
+Concatenated in sorted order they reproduce the body exactly — 225,851 bytes:
+
+```bash
+cat spec/_staging/part-* > spec/CP-SPEC-v0_5.md
+sha256sum spec/CP-SPEC-v0_5.md        # 816b5f47…891b37c9
+git hash-object spec/CP-SPEC-v0_5.md  # b63a3ee7…76b42b5a
+```
+
+Until that join is committed and `spec/_staging/` is removed, the body is staged, not published.
+This section is the repository's own statement of that, so that no row above is read as a claim
+that the file is here.
 
 ## What CP is — and is not
 
