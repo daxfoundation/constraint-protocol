@@ -542,6 +542,18 @@ CP imposes no rate limit on Contestation (§1.7). A flood of Contestations again
 The defense is legibility, not restriction:
 - Each Contestation names an issuer; each issuer walks to a principal (§7.13). Volume from one principal, or from a bloc whose deferral graph (§5.10) marks it as coordinated, is queryable.
 - Empty `addresses` is structurally visible (§12.3). Unengaged volume is distinguishable from engaged volume without reading the grounds.
+- Adjudicators' `engagement_score`s accumulate. A principal whose Contestations are consistently scored unengaged has a record.
+- Contestations are themselves contestable. A pattern of bad-faith contestation can be contested as a pattern.
+
+Volume is not filtered. It is made legible, so that whoever looks later can see it for what it was.
+
+### 12.6 Adjudication
+
+An Adjudication resolves a Contestation. It is a `cp.adjudication.v1` referrer on the Contestation.
+
+```
+credentialSubject: {
+  artifact_kind:         "Adjudication",
 @@CP_PART_5@@
 | D-006.d | IMPORTS_REASONING structural on Contestation | §12.4 | stands; predicate now `cp:importsReasoning` |
 | D-006.e | Constraints govern adherence, not epistemic access | §1.5, §11.5 | stands |
