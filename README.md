@@ -23,8 +23,6 @@ Worth getting out of the way before anything else.
 
 The problem is capability asymmetry plus opacity: one side of an interaction can do considerably more than the other, and the other cannot see what is being done or why. That shape does not depend on the capable party being a machine — it holds for an institution or a person just as well, which is why CP is built around a principal of unrestricted kind rather than around AI. Every delegation chain terminates at an entity not itself acting under delegation, and that is who the record names.
 
-The long-form argument, including a twenty-eight-row genealogy of who has historically got to assign meaning to whom, is [The Constraint](https://jeyanandan.com/blog/the-constraint/).
-
 ## Status
 
 **v0.5, dated 2026-09-10. Public working draft (D-040).** Phase A complete: 47 decisions, D-001–D-047. Phase B complete for the decisions that could have reversed (B-1–B-5, B-7) — Phase A held, one conditional resolved. Phase C, the specification body, complete and present here.
@@ -81,7 +79,7 @@ The watch list of adjacent work, and the conditions under which CP moves from *b
 
 ## A first adopter who is not neutral
 
-Obsidian Delta commits publicly, in [The Constraint](https://jeyanandan.com/blog/the-constraint/), to three things: everything it operates runs under a declared constraint with the record kept; it will run CP with any external party willing to declare and be checked; and it holds the [DAX constraint](https://daxfoundation.org/#dax-constraint) on top of the protocol.
+Obsidian Delta commits publicly to three things: everything it operates runs under a declared constraint with the record kept; it will run CP with any external party willing to declare and be checked; and it holds the [DAX constraint](https://daxfoundation.org/#dax-constraint) on top of the protocol.
 
 Two things follow. The protocol's first adopter is also where it came from, which makes this a conflict of interest rather than a validation — skin in the game, not evidence. And the DAX constraint is an *example* of a declared constraint, not a component of CP: the protocol is indifferent to which constraint you declare, only that you declared one and can be checked against it. Declaring something quite different and running CP honestly is entirely coherent.
 
@@ -95,7 +93,6 @@ v0.3 (synthesis) → v0.4 (reconciliation, D-001–D-012) → v0.4.1 (identity p
 
 ## Related
 
-- [The Constraint](https://jeyanandan.com/blog/the-constraint/) — the argument for this protocol, in essay form.
 - [daxfoundation.org](https://daxfoundation.org) — normative definitions: [constraint](https://daxfoundation.org/#constraint), [invariant constraint](https://daxfoundation.org/#invariant-constraint), [the DAX constraint](https://daxfoundation.org/#dax-constraint), [CP](https://daxfoundation.org/#cp), [nonbiological intelligence](https://daxfoundation.org/#nonbiological-intelligence), [AI as substrate](https://daxfoundation.org/#ai-as-substrate), [cognitive companion](https://daxfoundation.org/#cognitive-companion).
 - [ObsidianDelta/Fuckery](https://github.com/ObsidianDelta/Fuckery) — the constraint-and-emergence framework the protocol's shape came out of, and [The Snowflake](https://jeyanandan.com/blog/snowflake-fuckari-in-action/), which is that framework run against one object in twenty-eight steps.
 
