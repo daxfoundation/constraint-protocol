@@ -204,6 +204,7 @@ An interaction that ends is not a failure. A participant who disengages has not 
 > An ecosystem operator MAY publish identity documents on behalf of entities and MAY absorb the cost. An operator MUST NOT be the sole path by which an entity's identity can be published or resolved. For every entity, an independent publishing path MUST exist such that, if the operator refused to publish or resolve that entity, the entity could still publish and resolve its own identity without the operator's permission.
 
 The chokepoint test: *if the operator refused to publish a given entity, could that entity still get its identity onto the permanent substrate itself?* If yes, there is no chokepoint. If no, custody has become control.
+
 The convenient default runs through the operator and most entities will use it. The commitment requires only that the independent path exists and is documented. It distinguishes two roles that must never collapse: the operator as *convenience provider* (a legitimate role) and the operator as *required custodian* (a role that must not exist). Mechanics in §7.
 
 ### 1.12 Entity-Neutral Principal
@@ -438,6 +439,7 @@ The TS MUST NOT evaluate content. It MUST NOT decline registration because a sta
 Per D-005, when an interaction spans organizations, each organization's TS registers the statements independently. The result is two Receipts on the same participant-signed content, from two TS identities. Agreement between them is stronger evidence than either alone. Disagreement — one TS receipts a statement the other does not, or receipts different content — is itself a queryable signal and is never resolved by the substrate. Both records stand.
 
 #### 4.1.8 Implementations
+
 The normative requirement is SCITT conformance. Sigstore Rekor (v2) on Trillian is the reference implementation class; any SCITT-conformant TS satisfies this section. CP does not specify log internals, sharding, or proof formats beyond what SCITT and COSE Merkle Tree Proofs specify.
 
 #### Why Tier 1
