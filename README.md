@@ -8,6 +8,18 @@ It works the same way whether the parties are people, companies, or software. Th
 
 Stewarded by the [DAX Foundation](https://daxfoundation.org). This is a **public working draft**, and the evidence behind it is one run. Details below, honestly.
 
+## What it is intended to do
+
+The record is the mechanism, not the purpose. What the record is *for* is set out in the specification's first sentence — a substrate for compounding knowledge across entities, time, and constraint frames — and that is a statement of design intent. **None of the following has been demonstrated.** All of it is being worked on, and each is written down here so that it can be checked against later.
+
+- **Compound knowledge rather than reset it.** Two parties interact, what happened gets judged, and the judgment survives the interaction. The next party working under the same declared constraint starts from that floor instead of from nothing. Other frames can import it only by checking it themselves, which is the point.
+- **Compound reasoning rather than deference.** The record keeps who deferred to whom, and why a position changed. A floor that weights what it keeps by the quality of the argument behind it should accumulate argument faster than it accumulates agreement. Should.
+- **Surface the patterns that form over time.** When entities talk to each other for months rather than minutes, the shape of how they came to agree is visible in the record. The specification names the measurement that would test this — detection rate of manufactured consensus against a seeded bloc — and commits to a pre-registered study. It has not been run.
+- **Make re-judgement cheap and non-destructive.** A judge can re-score the past with knowledge that did not exist at the time, without erasing the old verdict. Both judgments stay in the record.
+- **Let a declared constraint act, not just describe.** A constraint can hold up named kinds of work until a problem is dealt with, and everyone who tries to get round it ends up in the log along with what they asked for.
+
+Accountability is the floor this stands on, not the ceiling. Read the next section before deciding what any of it is worth.
+
 ## What it does not do
 
 Worth getting out of the way before anything else.
@@ -81,7 +93,7 @@ The watch list of adjacent work, and the conditions under which CP moves from *b
 
 ## A first adopter who is not neutral
 
-Obsidian Delta commits publicly to three things: to run what it operates under a declared constraint with the record kept; to run CP with any external party willing to declare and be checked; and to hold the [DAX constraint](https://daxfoundation.org/#dax-constraint) on top of the protocol. These are commitments, not a description of current practice. Today the protocol has run in full once (see Status); the ledger-only service deployed since is idle, and the rest is still to be built.
+[Obsidian Delta](https://www.obsidiandelta.com) commits publicly to three things: to run what it operates under a declared constraint with the record kept; to run CP with any external party willing to declare and be checked; and to hold the [DAX constraint](https://daxfoundation.org/#dax-constraint) on top of the protocol. These are commitments, not a description of current practice. Today the protocol has run in full once (see Status); the ledger-only service deployed since is idle, and the rest is still to be built.
 
 Two things follow. The protocol's first adopter is also where it came from, which makes this a conflict of interest rather than a validation — skin in the game, not evidence. And the DAX constraint is an *example* of a declared constraint, not a component of CP: the protocol is indifferent to which constraint you declare, only that you declared one and can be checked against it. Declaring something quite different and running CP honestly is entirely coherent.
 
