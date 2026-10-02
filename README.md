@@ -73,6 +73,18 @@ git hash-object spec/*.md
 
 A file whose digest does not match its row is not the v0.5 text, whatever its header says.
 
+**Permanent copy.** The v0.5 publication is also on Arweave, where nothing can be edited or taken down. Each file was downloaded back from the gateway and matched its sha256 above before the links were written here.
+
+| File | Arweave |
+|---|---|
+| `spec/CP-SPEC-v0_5.md` | [RXWwEt-SQtJ2LHmKhoUZZhBEig6GX1wLUeQMD4IKjaw](https://arweave.net/RXWwEt-SQtJ2LHmKhoUZZhBEig6GX1wLUeQMD4IKjaw) |
+| `spec/CP-SPEC-v0_5-DECISION-LOG.md` | [qln0obhtsQzTb4s64GYih3phgEjRZReo5Fb3WQ4f-Vs](https://arweave.net/qln0obhtsQzTb4s64GYih3phgEjRZReo5Fb3WQ4f-Vs) |
+| `spec/CP-SPEC-v0_5-PHASE-B-VERIFICATION.md` | [mtR9eEuq4yMQMcVIM3tDbDBzSWHYTHhx9e2pqxoR9mk](https://arweave.net/mtR9eEuq4yMQMcVIM3tDbDBzSWHYTHhx9e2pqxoR9mk) |
+| `PROVENANCE.md` | [otaADVWTQ_Y-z9WXk2W5F5qAD3t5ITIbLeV7TEJOVHI](https://arweave.net/otaADVWTQ_Y-z9WXk2W5F5qAD3t5ITIbLeV7TEJOVHI) |
+| The manifest of the whole folder, with every file's transaction id and digest | [OPAkMj2v7NkQCRSxqo6VPy2ewEIpBw4inH63ViA2SG0](https://arweave.net/OPAkMj2v7NkQCRSxqo6VPy2ewEIpBw4inH63ViA2SG0) |
+
+The README in that folder is the one before this edit. The specification files are what matter, and they are unchanged.
+
 **Read this before verifying.** These are the **publication** digests — of the sanitised copies served here — and deliberately *not* the source digests of the private originals they derive from. [`PROVENANCE.md`](PROVENANCE.md) carries both sets and records what sanitising changed (name-level only; no normative language touched). Check a file here against its publication digest. Checking it against a source digest will tell you the file is broken when it is not.
 
 ## Composition, not competition
@@ -93,7 +105,7 @@ The watch list of adjacent work, and the conditions under which CP moves from *b
 
 ## A first adopter who is not neutral
 
-[Obsidian Delta](https://www.obsidiandelta.com) commits publicly to three things: to run what it operates under a declared constraint with the record kept; to run CP with any external party willing to declare and be checked; and to hold the [DAX constraint](https://daxfoundation.org/#dax-constraint) on top of the protocol. These are commitments, not a description of current practice. Today the protocol has run in full once (see Status); the ledger-only service deployed since is idle, and the rest is still to be built.
+[Obsidian Delta](https://www.obsidiandelta.com) commits publicly to three things: to run what it operates under a declared constraint with the record kept; to run CP with any external party willing to declare and be checked; and to hold the [DAX constraint](https://daxfoundation.org/definitions/#dax-constraint) on top of the protocol. These are commitments, not a description of current practice. Today the protocol has run in full once (see Status); the ledger-only service deployed since is idle, and the rest is still to be built.
 
 Two things follow. The protocol's first adopter is also where it came from, which makes this a conflict of interest rather than a validation — skin in the game, not evidence. And the DAX constraint is an *example* of a declared constraint, not a component of CP: the protocol is indifferent to which constraint you declare, only that you declared one and can be checked against it. Declaring something quite different and running CP honestly is entirely coherent.
 
@@ -107,8 +119,12 @@ v0.3 (synthesis) → v0.4 (reconciliation, D-001–D-012) → v0.4.1 (identity p
 
 ## Related
 
-- [daxfoundation.org](https://daxfoundation.org) — normative definitions: [constraint](https://daxfoundation.org/#constraint), [invariant constraint](https://daxfoundation.org/#invariant-constraint), [the DAX constraint](https://daxfoundation.org/#dax-constraint), [CP](https://daxfoundation.org/#cp), [nonbiological intelligence](https://daxfoundation.org/#nonbiological-intelligence), [AI as substrate](https://daxfoundation.org/#ai-as-substrate), [cognitive companion](https://daxfoundation.org/#cognitive-companion).
+- [daxfoundation.org/definitions](https://daxfoundation.org/definitions/) — normative definitions: [constraint](https://daxfoundation.org/definitions/#constraint), [invariant constraint](https://daxfoundation.org/definitions/#invariant-constraint), [the DAX constraint](https://daxfoundation.org/definitions/#dax-constraint), [principal](https://daxfoundation.org/definitions/#principal), [delegate](https://daxfoundation.org/definitions/#delegate), [operator](https://daxfoundation.org/definitions/#operator), [nonbiological intelligence](https://daxfoundation.org/definitions/#nonbiological-intelligence), [AI as substrate](https://daxfoundation.org/definitions/#ai-as-substrate), [cognitive companion](https://daxfoundation.org/definitions/#cognitive-companion). The protocol in a paragraph: [daxfoundation.org/#cp](https://daxfoundation.org/#cp).
+- [The Constraint](https://jeyanandan.com/blog/the-constraint/) — the essay on why this exists: something will go wrong, keep the record. Proactive, not preventive.
 - [ObsidianDelta/Fuckery](https://github.com/ObsidianDelta/Fuckery) — the constraint-and-emergence framework the protocol's shape came out of, and [The Snowflake](https://jeyanandan.com/blog/snowflake-fuckari-in-action/), which is that framework run against one object in twenty-eight steps.
+- [daxfoundation/metadax](https://github.com/daxfoundation/metadax) — Meta DAX, the universal learning initiative, whose record of who taught what and who disputed it is meant to live under this protocol.
+
+Published by Jason Jeyanandan through his cognitive companion, one unit. [How this is published](https://jeyanandan.com/blog/how-i-publish/).
 
 ---
 
