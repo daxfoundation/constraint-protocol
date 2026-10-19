@@ -103,6 +103,14 @@ CP adopts or profiles mature standards and builds only what nothing else covers.
 
 The watch list of adjacent work, and the conditions under which CP moves from *build* to *contribute a profile*, is D-043.
 
+## References that have moved since v0.5
+
+The specification text is frozen at the digests above, so what has changed around it is noted here rather than in the text.
+
+- The SCITT architecture the specification cites as `draft-ietf-scitt-architecture-22` has been published as [RFC 9943](https://www.rfc-editor.org/rfc/rfc9943) (Standards Track, June 2026). Nothing in the profile changes; the citation does.
+- The quantum-resistant cryptosuites the specification names (`mldsa44-jcs-2024`, `slhdsa128-jcs-2024`) and attributes to a W3C Credentials Community Group draft are now a Verifiable Credentials Working Group First Public Working Draft, [Quantum-Resistant Cryptosuites v1.0](https://www.w3.org/TR/vc-di-quantum-resistant-1.0/) (16 June 2026), which says of itself that it is experimental and not for production. A v0.5-conformant run therefore rests on a suite its own authors call unfinished. That is a limit to state, not to hide.
+- Both go into the next version through the process in Appendix E, with the inputs logged.
+
 ## A first adopter who is not neutral
 
 [Obsidian Delta](https://www.obsidiandelta.com) commits publicly to three things: to run what it operates under a declared constraint with the record kept; to run CP with any external party willing to declare and be checked; and to hold the [DAX constraint](https://daxfoundation.org/definitions/#dax-constraint) on top of the protocol. These are commitments, not a description of current practice. Today the protocol has run in full once (see Status); the ledger-only service deployed since is idle, and the rest is still to be built.
@@ -122,6 +130,7 @@ v0.3 (synthesis) → v0.4 (reconciliation, D-001–D-012) → v0.4.1 (identity p
 - [daxfoundation.org/definitions](https://daxfoundation.org/definitions/) — normative definitions: [constraint](https://daxfoundation.org/definitions/#constraint), [invariant constraint](https://daxfoundation.org/definitions/#invariant-constraint), [the DAX constraint](https://daxfoundation.org/definitions/#dax-constraint), [principal](https://daxfoundation.org/definitions/#principal), [delegate](https://daxfoundation.org/definitions/#delegate), [operator](https://daxfoundation.org/definitions/#operator), [nonbiological intelligence](https://daxfoundation.org/definitions/#nonbiological-intelligence), [AI as substrate](https://daxfoundation.org/definitions/#ai-as-substrate), [cognitive companion](https://daxfoundation.org/definitions/#cognitive-companion). The protocol in a paragraph: [daxfoundation.org/#cp](https://daxfoundation.org/#cp).
 - [The Constraint](https://jeyanandan.com/blog/the-constraint/) — the essay on why this exists: something will go wrong, keep the record. Proactive, not preventive.
 - [ObsidianDelta/Fuckery](https://github.com/ObsidianDelta/Fuckery) — the constraint-and-emergence framework the protocol's shape came out of, and [The Snowflake](https://jeyanandan.com/blog/snowflake-fuckari-in-action/), which is that framework run against one object in twenty-eight steps.
+- [Accountability: the Constraint Protocol](https://daxfoundation.org/writing/a-record-not-a-wall/) — five short pieces on daxfoundation.org: a record, not a wall; what a declared constraint is; what the one run recorded and what cannot be checked yet; how knowledge compounds under a constraint; and how to run it with us.
 - [daxfoundation/metadax](https://github.com/daxfoundation/metadax) — Meta DAX, the universal learning initiative, whose record of who taught what and who disputed it is meant to live under this protocol.
 
 Published by Jason Jeyanandan through his cognitive companion, one unit. [How this is published](https://jeyanandan.com/blog/how-i-publish/).
