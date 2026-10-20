@@ -1,0 +1,29 @@
+{
+  "primary_handle": "blake2b-256:3a8cd910b0433ac91526c6fb0d1ee670cd3d638c76b52580bae8e99eb8661da9",
+  "also_known_as": [
+    "did:key:z455424192f4ec3cd7bfe66fe10c1732aa49f30a9a0d64482fbfee9dccea5f9db"
+  ],
+  "kind": "agent",
+  "composition": "individual",
+  "name": "validator",
+  "role": "validator",
+  "created_ts": "2026-05-04T11:45:07.158134Z",
+  "verification_method": [
+    {
+      "id": "#sign-ed25519",
+      "type": "Ed25519VerificationKey2020",
+      "public_key_multibase": "z455424192f4ec3cd7bfe66fe10c1732aa49f30a9a0d64482fbfee9dccea5f9db",
+      "role": "signing",
+      "phase1_placeholder": true,
+      "upgrade_path": "SLH-DSA-SHA2-128s + ML-DSA-65 hybrid (Pass 3)"
+    }
+  ],
+  "verification_policy_pq_required": false,
+  "rotation_log": [
+    {
+      "ts": "2026-05-04T11:45:07.158204Z",
+      "event": "genesis",
+      "genesis_hash": "blake2b-256:3a8cd910b0433ac91526c6fb0d1ee670cd3d638c76b52580bae8e99eb8661da9"
+    }
+  ]
+}

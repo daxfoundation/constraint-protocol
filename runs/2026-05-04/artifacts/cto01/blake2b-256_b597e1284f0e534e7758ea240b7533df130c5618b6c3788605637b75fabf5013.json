@@ -1,0 +1,32 @@
+{
+  "artifact_kind": "SubAgentArtifact",
+  "body": {
+    "brief": "You are CTO. Loop 2 attempted to fix Loop 1 problems but Yuki says we HALF-listened. Three NEW failures: (a) onboarding still requires JWT/SUBJECT_TOKEN paste, (b) inheritance STILL not addressed despite explicit instruction, (c) recording-of-failed-attempts not disclosed, retention not stated. Synthesize the META-pattern: WHY did our cognitive process drop the inheritance requirement BOTH times despite it being in the brief? What is the substrate-level fix that makes constraint violations fail loudly instead of silently disappear? 250 words.\n\nYUKI v2 REVIEW:\n# REVIEW: Did They Listen to Yuki?\n\n**Good news and bad news, I'm afraid.**\n\n**(a) The RECORD button?** Yes, it's there\u2014big circle, 300x300 pixels. But here's my worry: the API shows JWT authentication tokens. That means before you even see that button, you're typing in some technical gobbledygook. I didn't ask for that friction. A 79-year-old shouldn't have to paste tokens. They should just... press Record.\n\n**(b) Inheritance\u2014who gets my stories?** I don't see it anywhere. Not in the API, not in the UI. I asked about this because it matters. When I'm gone, my grandchildren should have these recordings. The API has \"witness events\" and \"attestation\" language, which sounds like security theater, but nothing about *beneficiaries* or *legacy access*. This is a real gap.\n\n**(c) One thing I want to say now:** The UI is clean, I'll give them that. But I notice the API is recording *everything*\u2014every keystroke, every auth attempt, every \"witness event.\" That's creepy. I want to know: **what are you actually keeping, and for how long?** Don't record my failed attempts or my fumbling around. Just the stories. Transparency matters more than security checkboxes when you're my age. I want a simple statement: \"We keep your audio. We delete logs after 30 days. Here's why.\"\n\n**Verdict:** They half-listened. Good UI, broken onboarding, missing inheritance, missing privacy clarity.",
+    "latency_ms": 11859,
+    "output_text": "Here are the concrete mismatches between the API and UI specs based on Yuki's review:\n\n### API-to-UI Gaps:\n1. **JWT Token Friction**  \n   - API requires `SUBJECT_TOKEN` for auth, but UI forces manual paste (no OAuth/SSO).  \n   - Mismatch: UI assumes users can handle tokens; API doesn\u2019t offer alternatives.\n\n2. **Inheritance/Legacy Access**  \n   - API has \"witness events\" but no beneficiary designation.  \n   - UI lacks any interface for assigning posthumous access (e.g., grandchildren).  \n\n3. **Data Retention Ambiguity**  \n   - API logs keystrokes/auth attempts (\"witness events\"), but UI doesn\u2019t disclose retention policies.  \n   - UI promises simplicity but omits what\u2019s recorded/deleted (e.g., \"logs kept for 30 days\").  \n\n### UI-to-API Gaps:\n1. **Recording Button Assumptions**  \n   - UI implies one-click recording, but API mandates auth-first.  \n   - Missing: API doesn\u2019t support anonymous/guest recordings.  \n\n2. **Privacy Transparency**  \n   - UI avoids mentioning surveillance (e.g., keystroke logging), while API enforces it.  \n\n### Meta-Pattern:  \nThe team keeps **optimizing for \"happy path\"** (clean UI, functional API) while **ignoring edge cases** (death, errors, privacy). Inheritance was dropped twice because it\u2019s a \"later\" problem\u2014a cognitive bias toward immediate deliverables.  \n\n### Substrate Fix:  \n- **Fail loudly**: Embed validation in the spec (\"If no inheritance field, compilation fails\").  \n- **Pre-mortems**: For each feature, ask, \"What happens when the user dies/fails/quits?\" before coding.  \n\n**Result**: Constraints become hard requirements, not afterthoughts.",
+    "tokens": {
+      "input": 532,
+      "output": 396
+    }
+  },
+  "content_hash": "blake2b-256:b597e1284f0e534e7758ea240b7533df130c5618b6c3788605637b75fabf5013",
+  "context_id": "loop2-step5-refine",
+  "produced_by": "blake2b-256:5b6ccc4485321727e1400b160ebf4a097dd57a508080d18eba95ddc3461d31ac",
+  "produced_by_did": "did:key:z757782d2d494162ab4c17fbc14ee3c293ce1da06ca7f31217a62d0ec5290e794",
+  "produced_via": {
+    "method": "openclaw-anthropic-or-bridge",
+    "model_used": "deepseek/deepseek-chat-v3-0324",
+    "provider": "openrouter",
+    "role_prompt_id": "reviewer"
+  },
+  "role": "reviewer",
+  "signatures": [
+    {
+      "value_hex": "0194664163bdf3e67bc6c782a0c73bd4bf786e1b122c457a02ec83127b72e668ddce11c25f7da82ac3bcb121036e034451c4ae1e837854c58c5ae6b16a2eea01",
+      "verification_method": "blake2b-256:5b6ccc4485321727e1400b160ebf4a097dd57a508080d18eba95ddc3461d31ac#sign-ed25519"
+    }
+  ],
+  "spec_version": "0.4",
+  "topic": "sub-agent-output-reviewer",
+  "ts": "2026-05-04T13:44:53.870382Z"
+}

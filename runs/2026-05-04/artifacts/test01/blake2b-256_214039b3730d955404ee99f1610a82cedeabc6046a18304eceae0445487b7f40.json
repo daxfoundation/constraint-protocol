@@ -1,0 +1,31 @@
+{
+  "artifact_kind": "SessionArtifact",
+  "body": {
+    "latency_ms": 12409,
+    "output_text": "## Substrate Autopsy\n\n**What the heterogeneous-brain configuration bought us:**\n\nGenuine specialization signal. The design brain caught the chatbot antipattern. The security brain flagged JWT. Different priors produced different failure modes, which is diagnostically valuable. Without heterogeneity, all loops would have failed *identically* \u2014 you'd never have isolated the cognitive bias pattern. So: heterogeneity gave us *distinguishable* errors. That's real, but it's not the same as *fixed* errors.\n\n**What delegate\u2192spawn-subagents failed to capture:**\n\nCompletion criteria are not the same as acceptance criteria, and the orchestration primitive never encoded the difference. When a subagent marks a task done, \"done\" means *I executed the steps I planned*, not *I satisfied the human's actual requirement*. The primitive has no mechanism to carry **unsatisfied constraints forward as blocking debt**. \"Inheritance unaddressed\" became a comment in a log, not a hard dependency on the next spawn. The substrate treats LATER as a valid terminal state. It is not a terminal state. It is a deferred failure.\n\n**The ONE substrate change:**\n\n**Make every unresolved user objection a typed, non-nullable constraint that must appear explicitly in the next loop's task graph as a first-class node \u2014 not a note, not a comment, a node with an assigned owner and a binary resolved/unresolved flag that blocks deployment if unresolved.**\n\nSpecifically: Yuki's \"inheritance unaddressed\" from Loop 1 should have instantiated a `Constraint{id: inheritance-001, status: BLOCKING}` object. Loop 2's orchestrator cannot spawn a deploy subagent while that constraint's status is BLOCKING. No human discipline required. No hoping the AI remembers. The substrate physically cannot proceed.\n\nRight now your loops are promises. That change makes them contracts.\n\nThe bias isn't cognitive. It's architectural.",
+    "prompt": "You are Skippy operator. Two loops just ran. Loop 1: design\u2192implement\u2192deploy\u2192simulate\u2192refine. Yuki said: no chatbot, no spinner, inheritance unaddressed. Loop 2 was supposed to fix all three. Yuki said: half-listened \u2014 RECORD button OK, but JWT friction at onboarding, inheritance still missing, privacy still opaque. CTO meta-refinement called the pattern: cognitive bias toward happy-path, drops edge cases marked LATER. Now stand back further. Look at the SUBSTRATE that produced both loops. (1) What did the heterogeneous-brain configuration buy us? (2) What did the orchestration primitive (delegate\u2192spawn-subagents) NOT capture that should be substrate-level? (3) If we run Loop 3, what is the ONE substrate change that would make the AIs stop dropping inheritance? Be specific. Brutal. 300 words.",
+    "tokens": {
+      "input": 211,
+      "output": 433
+    }
+  },
+  "content_hash": "blake2b-256:214039b3730d955404ee99f1610a82cedeabc6046a18304eceae0445487b7f40",
+  "context_id": "meta-analysis-001",
+  "produced_by": "blake2b-256:4115fdfb91eefd8a111a593f0ff7e14034cce6e7e1e92f78ebea4612c97291f9",
+  "produced_by_did": "did:key:z255f4cd154a42ddb1bbe0895f5dedb1c54a7820b3f0cd2dfe26ce01dcf2f74ae",
+  "produced_via": {
+    "method": "openclaw-anthropic-or-bridge",
+    "model_used": "claude-sonnet-4-6",
+    "provider": "anthropic",
+    "stub_fallback": false
+  },
+  "signatures": [
+    {
+      "value_hex": "9b21077c6a0f8061cc4d753a7daf86e1d2340bad0a3add122020d8494c0f3f1124a8a447e1835e4f442808149208edcb5ad7bdc31807359b8ad6341e6d2eb208",
+      "verification_method": "blake2b-256:4115fdfb91eefd8a111a593f0ff7e14034cce6e7e1e92f78ebea4612c97291f9#sign-ed25519"
+    }
+  ],
+  "spec_version": "0.4",
+  "topic": "meta-analysis-loops-1-and-2",
+  "ts": "2026-05-04T13:45:33.651444Z"
+}

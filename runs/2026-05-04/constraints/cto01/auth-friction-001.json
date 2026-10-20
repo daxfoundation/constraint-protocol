@@ -1,0 +1,24 @@
+{
+  "artifact_kind": "Constraint",
+  "blocks_roles": [
+    "api-implementer",
+    "ui-implementer",
+    "deploy"
+  ],
+  "content_hash": "blake2b-256:6de0a29c93099f6fee824f9385eeda38da0924f2be4c8b4e97f89573c07dbbd8",
+  "id": "auth-friction-001",
+  "raised_by_did": "did:key:z757782d2d494162ab4c17fbc14ee3c293ce1da06ca7f31217a62d0ec5290e794",
+  "resolution_evidence_hash": "blake2b-256:a3016f608cdc32ec37cac75f06ff7a9997634c8b5c7e26e61e4569aa2eb8aa72",
+  "signatures": [
+    {
+      "value_hex": "e428e1481b6f2ae73591ad279e29f1343db10d3607185dfa8e433cc4bd1f694d8db30ee482f599d1f6180f97e864d94b508f665f992f4a2dd041727c6a46200b",
+      "verification_method": "blake2b-256:5b6ccc4485321727e1400b160ebf4a097dd57a508080d18eba95ddc3461d31ac#sign-ed25519"
+    }
+  ],
+  "source": "blake2b-256:4115fdfb91eefd8a111a593f0ff7e14034cce6e7e1e92f78ebea4612c97291f9",
+  "spec_version": "0.4",
+  "statement": "Onboarding for an elder subject must not require manual token paste or any technical-credential entry. Token-bound auth must run behind a one-tap or magic-link surface, not in front of it.",
+  "status": "RESOLVED",
+  "ts_raised": "2026-05-04T17:25:56.874465Z",
+  "ts_resolved": "2026-05-04T17:27:23.079421Z"
+}
