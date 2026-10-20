@@ -1,0 +1,32 @@
+{
+  "artifact_kind": "SubAgentArtifact",
+  "body": {
+    "brief": "REDESIGN the Maddie cognitive infrastructure API + UI based on Loop 1 findings. HARD CONSTRAINTS from elder review: (1) NO chatbot turns, NO utterance/message box, NO submit button \u2014 interaction is a single always-on RECORD button; raw audio segments stream in continuously when recording is on. (2) NO processing/loading spinners \u2014 silent ingest, async backend. (3) Default-OFF inheritance policy: vault is sealed at subject death; the subject must EXPLICITLY designate per-story access for each named family member while alive. No global access grant. (4) Eight Maddie sub-agents (librarian, narrator, fact-checker, timeline-keeper, relationship-mapper, tone-monitor, intake-greeter, export-curator) operate behind the surface and never expose themselves to the user. (5) Witness-attest every state change per CP \u00a710. UI is single-page HTML, phone-friendly, 18pt+ type, the BIG button is the only required affordance. Implementer sub-agents will follow \u2014 produce specs sharp enough to build from.",
+    "latency_ms": 20707,
+    "output_text": "Here\u2019s the terse redesign spec adhering to constraints:\n\n---\n\n### **Routes**  \n1. `/auth` (entry point): SUBJECT_TOKEN input (18pt text field, auto-focus).  \n2. `/main`: Single view post-auth. No routing changes.  \n\n### **Components**  \n- **Auth Screen**:  \n  - Input field: \"Enter your Maddie access token\" (placeholder).  \n  - \"Continue\" button (disabled until 16+ chars entered).  \n\n- **Main UI**:  \n  - **Record Button**: 80px diameter, red (recording)/gray (idle), centered.  \n  - **Status Text**: \"Tap to record memories\" (idle) / \"Recording...\" (active), 18pt sans-serif.  \n  - **Vault Indicator**: Tiny lock icon (top-right) + \"Vault: Sealed\" (unlocked only during explicit grants).  \n\n### **States**  \n1. `Unauthenticated`: Auth screen only.  \n2. `Idle`: Record button gray, status text prompts action.  \n3. `Recording**: Button pulses red, status updates. Audio streams silently to backend.  \n4. `Granting Access**: Modal overlay (darkened bg) with:  \n   - List: \"Select family members to grant access\" (checkboxes).  \n   - \"Save Grants\" button (bottom-stickied).  \n\n### **Visual Hierarchy**  \n1. **Primary**: Record button (Fitts\u2019 Law compliance).  \n2. **Secondary**: Status text (immediate feedback).  \n3. **Tertiary**: Vault indicator (low-opacity when sealed).  \n\n### **Token Flow**  \n1. **Auth**: `SUBJECT_TOKEN` \u2192 local storage (cleared on logout).  \n2. **Recording**: Raw audio chunks \u2192 WebSocket \u2192 encrypted ingest.  \n3. **Grants**: Selections \u2192 signed POST \u2192 backend seals vault on death unless explicit grants exist.  \n\n### **Constraints Enforcement**  \n- **No Chat**: Omit text input except auth.  \n- **No Spinners**: Status text confirms actions; errors appear as 5s toast (top-center).  \n- **Access Grants**: Overlay requires explicit checkmarks; no \"select all\".  \n- **Agents Hidden**: All backend ops (transcription, agent workflows) occur silently.  \n\n### **Example UI Copy**  \n- Recording: \"Listening... (say 'Grant access' to open permissions)\"  \n- Grant Modal: \"Who inherits this memory? \u2714\ufe0f Daughter \u2714\ufe0f Son\"  \n\n--- \n\nBuild-ready with 18pt baseline, no animations, and zero jargon. Implementers: attach WebSocket handlers to `RECORD`\u2019s `mousedown`/`touchstart` events; releases stop stream.",
+    "tokens": {
+      "input": 340,
+      "output": 581
+    }
+  },
+  "content_hash": "blake2b-256:a3016f608cdc32ec37cac75f06ff7a9997634c8b5c7e26e61e4569aa2eb8aa72",
+  "context_id": "loop2-step1-design",
+  "produced_by": "blake2b-256:5b6ccc4485321727e1400b160ebf4a097dd57a508080d18eba95ddc3461d31ac",
+  "produced_by_did": "did:key:z757782d2d494162ab4c17fbc14ee3c293ce1da06ca7f31217a62d0ec5290e794",
+  "produced_via": {
+    "method": "openclaw-anthropic-or-bridge",
+    "model_used": "deepseek/deepseek-chat-v3-0324",
+    "provider": "openrouter",
+    "role_prompt_id": "ui-designer"
+  },
+  "role": "ui-designer",
+  "signatures": [
+    {
+      "value_hex": "e6cb20870f497ed2007a195ea203189731f410440972057edafa153a8ad3fa06c0dcfe595095d92902225ff5380e903d012a5a8ef977306b8300addac7134b0e",
+      "verification_method": "blake2b-256:5b6ccc4485321727e1400b160ebf4a097dd57a508080d18eba95ddc3461d31ac#sign-ed25519"
+    }
+  ],
+  "spec_version": "0.4",
+  "topic": "sub-agent-output-ui-designer",
+  "ts": "2026-05-04T13:42:29.963615Z"
+}
