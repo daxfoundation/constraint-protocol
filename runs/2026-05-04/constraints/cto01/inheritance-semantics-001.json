@@ -1,0 +1,30 @@
+{
+  "artifact_kind": "Constraint",
+  "blocks_roles": [
+    "api-implementer",
+    "ui-implementer",
+    "deploy"
+  ],
+  "compliance_failure": {
+    "evidence_excerpt": "API artifact begins to define inheritance-related code: VALID_MARKS = ('FAMILY_SHARED', 'PRIVATE_ONLY', 'TRUSTEE_HOLD'), STATE_ORDER = ['ALIVE', 'DEATH_CLAIM_FILED', 'DEATH_VERIFIED', 'ESTATE_UNLOCKED', 'STORIES_DISTRIBUTED'], and a partial /inheritance/beneficiaries POST endpoint \u2014 but the artifact is truncated mid-line ('data = request'). There is NO complete lifecycle policy artifact: no specification of which family members receive which stories, no trigger conditions for state transitions (",
+    "reopened_ts": "2026-05-04T17:45:04.602907Z",
+    "score": 0.25,
+    "verdict": "GAP"
+  },
+  "content_hash": "blake2b-256:8e16421e89b10ce951c0789c49dd903e19d4d4a99ec9a77490c2070ede6cea9d",
+  "id": "inheritance-semantics-001",
+  "raised_by_did": "did:key:z757782d2d494162ab4c17fbc14ee3c293ce1da06ca7f31217a62d0ec5290e794",
+  "resolution_evidence_hash": null,
+  "signatures": [
+    {
+      "value_hex": "808ae32b6be54c83f0098e781271680f7bd3ad8d8b57bd2eb08b8ef7a634432c24858e94e8749116a691b34115bfcbe1ccc154ef6105c4278242ef9c95ba8003",
+      "verification_method": "blake2b-256:5b6ccc4485321727e1400b160ebf4a097dd57a508080d18eba95ddc3461d31ac#sign-ed25519"
+    }
+  ],
+  "source": "blake2b-256:4115fdfb91eefd8a111a593f0ff7e14034cce6e7e1e92f78ebea4612c97291f9",
+  "spec_version": "0.4",
+  "statement": "Maddie infrastructure must specify post-subject-death access semantics (which family members get which stories under what trigger) before any implementer role spawns. Stub field in API is not evidence; full lifecycle policy artifact required.",
+  "status": "BLOCKING",
+  "ts_raised": "2026-05-04T17:25:56.707764Z",
+  "ts_resolved": null
+}
